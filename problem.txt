@@ -1,0 +1,31 @@
+
+NOTES Application
+
+
+backend
+
+
+/signup
+/login
+
+Only if user is logged in ....
+
+/notes/create/ - {title,note,category,authorname}
+/notes - everyone's notes;
+/notes/update/:noteID - only his/her notes;
+/notes/delete/:noteID - only his/her notes;
+
+
+
+
+Frontend -> 
+//signup
+//login -> token -> store in localStorage
+
+/notes;
+  const token = localStorage.getItem("token")
+  fetch("api/notes"){
+    headers : {
+        "Authorization": `Bearer ${token}`
+    }
+  }
